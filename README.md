@@ -8,7 +8,7 @@ Input: *"Find 2 high-protein vegetarian dinners under 30 mins"*
 
 Output: Grounded report with recipes, ingredients, and **citations proving where info came from**.
 
-## Quick Start (5 mins)
+## Quick Start
 
 ### 1. Prerequisites
 - Node.js ≥ 18
