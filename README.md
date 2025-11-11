@@ -1,4 +1,4 @@
-# Recipe Research Agent 🤖🍽️
+# Research Agent 🤖
 
 **Production-quality AI agent pipeline:** Router → Planner → Retriever (RAG) → ToolExec → Reporter + Memory, Safety, Tests.
 
@@ -169,81 +169,6 @@ For each step:
     ↓
 Final Report (with confidence & proof)
 ```
-
-## Next Steps
-
-### Immediate (Today)
-- [ ] Add OPENAI_API_KEY to .env
-- [ ] Run `npx ts-node src/index.ts`
-- [ ] Run `npm test`
-
-### This Week
-- [ ] Add KB files (`.md` in `src/rag/kb/`)
-- [ ] Change prompts (edit `src/graph/router.ts`)
-- [ ] Add a new tool
-- [ ] Try custom queries
-
-### This Month
-- [ ] Replace naive RAG with vector search (LangChain + FAISS)
-- [ ] Call real API (Spoonacular, Edamam)
-- [ ] Deploy as REST API
-- [ ] Add logging & metrics
-
-## Troubleshooting
-
-| Issue | Fix |
-|-------|-----|
-| `OPENAI_API_KEY not set` | Add to `.env` |
-| `Model not found` | Use available model in `.env` |
-| `Nothing retrieved` | Check KB files in `src/rag/kb/` |
-| TypeScript errors | Run `npx tsc --noEmit` |
-| Test fails | Ensure agent returns ≥2 items with citations |
-
-## Key Concepts
-
-- **Router** - Cheap classifier (decides task type)
-- **Planner** - Expensive planner (creates step-by-step plan)
-- **Retriever** - Local search (no API calls, citations from sources)
-- **ToolExec** - Tool calling (currently mock, can be real APIs)
-- **Reporter** - Deterministic formatter (no LLM needed)
-- **Memory** - Preference storage (in-memory)
-- **Safety** - Pattern-based blocker (regex rules)
-- **Eval** - Golden test (ensures agent still works)
-
-## Extending
-
-### Add KB File
-```bash
-echo "# My Topic
-Facts here" > src/rag/kb/my_topic.md
-```
-Auto-loaded on startup!
-
-### Add New Tool
-Create `src/tools/myTool.ts`, export async function, call from `src/graph/toolexec.ts`.
-
-### Change LLM Provider
-Edit `src/openai.ts` to use Anthropic, Azure, etc.
-
-### Replace RAG
-Swap `src/rag/ingest.ts` with LangChain + FAISS / Pinecone / Weaviate.
-
-## Cost Analysis
-
-- **Per query**: ~$0.004
-- **100 queries/day**: ~$10/month
-- **1,000 queries/day**: ~$100/month
-
-(Use cheaper models to reduce costs)
-
-## What You've Built
-
-✅ 14 TypeScript source files  
-✅ Type-safe agent pipeline  
-✅ Grounded responses with citations  
-✅ Production patterns (error handling, validation)  
-✅ Automated tests  
-✅ Extensible architecture  
 
 This is **real agent technology**, not a toy example!
 
