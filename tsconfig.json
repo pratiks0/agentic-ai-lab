@@ -1,0 +1,41 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    /* File Layout */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Environment Settings */
+    "module": "commonjs",           // ✅ switched from "esnext" to "commonjs"
+    "target": "es2020",             // ✅ reasonable modern Node target
+    "moduleResolution": "node",     // ✅ classic node-style resolution
+    "types": ["node"],
+    "lib": ["es2020"],
+
+    /* Output Options */
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    /* Type Checking */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* Style Options */
+    // "noImplicitReturns": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+
+    /* Misc */
+    "skipLibCheck": true
+  },
+
+  /* ts-node settings */
+  "ts-node": {
+    "esm": false,                   // ✅ disable ESM mode
+    "experimentalEsm": false,       // ✅ disable experimental loader
+    "transpileOnly": true           // speeds up dev, no full type checking
+  }
+}
