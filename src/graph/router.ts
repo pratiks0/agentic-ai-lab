@@ -7,5 +7,5 @@ Output JSON: {"taskType":"research|action","profile":"default|food"}.`;
   const res = await chatJSON(sys, `Query: ${userQuery}`, process.env.MODEL_CHEAP!);
   const parsed = RouterOutput.safeParse(JSON.parse(res));
   if (!parsed.success) return { taskType: "research", profile: "food" } as const;
-  return parsed.data;
+  return parsed.data; //return parsed data
 }
