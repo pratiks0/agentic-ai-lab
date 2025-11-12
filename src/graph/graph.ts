@@ -31,7 +31,7 @@ export async function runAgent(userQuery: string) {
     // analyze step is implicit in reporter for this simple build
   }
 
-  // Reporter
+  //Reporter
   const report = await reporterNode({ goal: plan.goal, retrieved, toolResults });
   return { route, plan, report };
 }
