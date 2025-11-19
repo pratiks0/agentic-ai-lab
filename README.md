@@ -177,7 +177,6 @@ This is **real agent technology**, not a toy example!
 - **OpenAI API**: https://platform.openai.com/docs
 - **Zod Validation**: https://zod.dev
 - **LangChain**: https://python.langchain.com
-- **Agent Patterns**: https://www.anthropic.com/research/building-effective-agents
 
 ## License
 
